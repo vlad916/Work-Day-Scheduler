@@ -24,6 +24,24 @@ var currentTime = function () {
 }   
 
 
+setInterval(currentTime, 1000);
+
+
+BtnEl.on("click", function (event) {
+
+    event.preventDefault();
+
+    var button = $(this);
+    var btnData = $(this).attr("data-time");
+    console.log(btnData);
+    var targetEvent = $("#event" + btnData);
+    console.log(targetEvent);
+    console.log(targetEvent.val());
+
+    localStorage.setItem(targetEvent.attr("id"), targetEvent.val());
+});
+
+
 
 
 
