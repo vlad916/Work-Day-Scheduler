@@ -41,12 +41,19 @@ BtnEl.on("click", function (event) {
     localStorage.setItem(targetEvent.attr("id"), targetEvent.val());
 });
 
+$("#event9").text(localStorage.getItem("event9"));
+$("#event10").text(localStorage.getItem("event10"));
+$("#event11").text(localStorage.getItem("event11"));
+$("#event12").text(localStorage.getItem("event12"));
+$("#event13").text(localStorage.getItem("event13"));
+$("#event14").text(localStorage.getItem("event14"));
+$("#event15").text(localStorage.getItem("event15"));
+$("#event16").text(localStorage.getItem("event16"));
+$("#event17").text(localStorage.getItem("event17"));
 
 
-
-
-
-
-
-
+$("#clearBtn").on("click", function () {
+    localStorage.clear();
+    $(".event-plan").text("");
+});
 });
